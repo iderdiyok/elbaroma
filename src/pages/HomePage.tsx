@@ -3,7 +3,8 @@ import SEO from '@/components/SEO';
 import HeroSection from '@/components/HeroSection';
 import ServicesSection from '@/components/ServicesSection';
 import SeasonalSection from '@/components/SeasonalSection';
-import GalleryPreview from '@/components/GalleryPreview';
+// import GalleryPreview from '@/components/GalleryPreview';
+import InstagramSection from '@/components/InstagramSection';
 
 const HomePage: React.FC = () => {
   return (
@@ -16,7 +17,8 @@ const HomePage: React.FC = () => {
       <HeroSection />
       <ServicesSection />
       <SeasonalSection />
-      <GalleryPreview />
+      {/* <GalleryPreview /> */}
+      <InstagramSection />
     </div>
   );
 };

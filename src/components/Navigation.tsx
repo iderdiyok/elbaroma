@@ -59,7 +59,9 @@ const Navigation: React.FC = () => {
             </div>
 
             <Button className="elbaroma-gradient text-white">
-              Jetzt Anfragen
+              <Link to="/contact">
+                Jetzt Anfragen
+              </Link>
             </Button>
           </div>
 

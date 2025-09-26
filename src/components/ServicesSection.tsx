@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Heart, Building2, Cake, Users, GraduationCap, Sparkles, ArrowRight } from 'lucide-react';
+import RequestModal from './RequestModal';
+import { Link } from 'react-router-dom';
 
 const ServicesSection: React.FC = () => {
+  const [selectedEvent, setSelectedEvent] = useState<string | null>(null);
   const services = [
     {
       icon: Heart,
@@ -88,13 +91,16 @@ const ServicesSection: React.FC = () => {
                     ))}
                   </ul>
                   
-                  <Button 
-                    variant="outline" 
-                    className="w-full hover:bg-primary hover:text-primary-foreground transition-colors"
+                  <Button
+                    className="w-full elbaroma-gradient w-full hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer"
+                    onClick={() => setSelectedEvent(service.title)}
+                    type="button"
+                    aria-label={`Anfrage für ${service.title} stellen`}
+                    title={`Anfrage für ${service.title} stellen`}  
                   >
-                    Mehr erfahren
+                    Anfrage erstellen
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                </Button>
                 </CardContent>
               </Card>
             );
@@ -141,15 +147,18 @@ const ServicesSection: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="elbaroma-gradient text-white px-8">
-              Kostenlose Beratung
+              <Link to="/contact">Kostenlose Beratung</Link>
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button variant="outline" size="lg" className="px-8">
-              Menü ansehen
+              <Link to="/menu">Menü ansehen</Link>
             </Button>
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      <RequestModal open={!!selectedEvent} onClose={() => setSelectedEvent(null)} eventType={selectedEvent || ""} />
     </section>
   );
 };

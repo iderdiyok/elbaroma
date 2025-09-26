@@ -37,7 +37,9 @@ const Footer: React.FC = () => {
             </div>
             
             <Button className="elbaroma-gradient text-white">
-              Jetzt Anfragen
+              <Link to="/contact">
+                Jetzt Anfragen
+              </Link>
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
