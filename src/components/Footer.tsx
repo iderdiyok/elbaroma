@@ -106,11 +106,11 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a 
-                  href="mailto:elbaroma.catering@gmail.com" 
+                  href="mailto:info@elb-aroma.de" 
                   className="flex items-center space-x-3 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Mail className="h-4 w-4" />
-                  <span>elbaroma.catering@gmail.com</span>
+                  <span>info@elb-aroma.de</span>
                 </a>
               </li>
               <li>

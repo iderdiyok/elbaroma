@@ -44,14 +44,14 @@ const DatenschutzPage: React.FC = () => {
                 <div className="bg-muted/30 rounded-lg p-6">
                   <p className="text-muted-foreground">
                     <strong>Verantwortlicher im Sinne der DSGVO:</strong><br />
-                    Elbaroma Catering<br />
-                    [Name des Inhabers]<br />
-                    [Straße und Hausnummer]<br />
-                    [PLZ] Winsen (Luhe)<br />
+                    <strong>Elbaroma Catering</strong><br />
+                    Guelsuem Derdiyok<br />
+                    Kiebitzweg 1<br />
+                    21423 Winsen (Luhe)<br />
                     Deutschland<br /><br />
                     
                     <strong>Kontakt:</strong><br />
-                    E-Mail: elbaroma.catering@gmail.com<br />
+                    E-Mail: info@elb-aroma.de<br />
                     Telefon: 0176 305 08 998
                   </p>
                 </div>
@@ -226,7 +226,7 @@ const DatenschutzPage: React.FC = () => {
                   <p className="text-muted-foreground leading-relaxed">
                     Bei Fragen zum Datenschutz können Sie sich jederzeit an uns wenden:<br /><br />
                     
-                    <strong>E-Mail:</strong> elbaroma.catering@gmail.com<br />
+                    <strong>E-Mail:</strong> info@elb-aroma.de<br />
                     <strong>Telefon:</strong> 0176 305 08 998<br /><br />
                     
                     Sie haben auch das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über unsere 

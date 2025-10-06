@@ -37,7 +37,7 @@ const ImpressumPage: React.FC = () => {
                     
                     <div>
                       <h3 className="font-semibold text-foreground">Inhaber/Geschäftsführer:</h3>
-                      <p className="text-muted-foreground">[Name des Inhabers]</p>
+                      <p className="text-muted-foreground">Guelsuem Derdiyok</p>
                     </div>
                     
                     <div className="flex items-start space-x-3">
@@ -45,9 +45,9 @@ const ImpressumPage: React.FC = () => {
                       <div>
                         <h3 className="font-semibold text-foreground">Anschrift:</h3>
                         <p className="text-muted-foreground">
-                          [Straße und Hausnummer]<br />
-                          [PLZ] Winsen (Luhe)<br />
-                          Deutschland
+                          Kiebitzweg 1<br />
+                          21423 Winsen (Luhe)<br />
+                          Deutschland<br /><br />
                         </p>
                       </div>
                     </div>
@@ -74,8 +74,8 @@ const ImpressumPage: React.FC = () => {
                     <Mail className="h-5 w-5 text-primary" />
                     <div>
                       <h3 className="font-semibold text-foreground">E-Mail:</h3>
-                      <a href="mailto:elbaroma.catering@gmail.com" className="text-primary hover:underline">
-                        elbaroma.catering@gmail.com
+                      <a href="mailto:info@elb-aroma.de" className="text-primary hover:underline">
+                        info@elb-aroma.de
                       </a>
                     </div>
                   </div>
@@ -88,7 +88,7 @@ const ImpressumPage: React.FC = () => {
                 <div className="bg-muted/30 rounded-lg p-6">
                   <p className="text-muted-foreground">
                     Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-                    <span className="font-medium">[USt-IdNr. wird ergänzt]</span>
+                    <span className="font-medium">50/109/07719</span>
                   </p>
                 </div>
               </section>
@@ -111,9 +111,10 @@ const ImpressumPage: React.FC = () => {
                 <h2 className="text-2xl font-bold text-foreground mb-6">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
                 <div className="bg-muted/30 rounded-lg p-6">
                   <p className="text-muted-foreground">
-                    [Name des Verantwortlichen]<br />
-                    [Straße und Hausnummer]<br />
-                    [PLZ] Winsen (Luhe)
+                    Guelsuem Derdiyok<br />
+                    Kiebitzweg 1<br />
+                    21423 Winsen (Luhe)<br />
+                    Deutschland<br /><br />
                   </p>
                 </div>
               </section>

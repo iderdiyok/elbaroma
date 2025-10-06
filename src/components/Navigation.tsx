@@ -50,7 +50,7 @@ const Navigation: React.FC = () => {
                 <Phone className="h-4 w-4" />
                 <span>0176 305 08 998</span>
               </a>
-              <a href="mailto:elbaroma.catering@gmail.com" className="flex items-center space-x-1 hover:text-primary transition-colors">
+              <a href="mailto:info@elb-aroma.de" className="flex items-center space-x-1 hover:text-primary transition-colors">
                 <Mail className="h-4 w-4" />
               </a>
               <a href="#" className="flex items-center space-x-1 hover:text-primary transition-colors">
@@ -101,9 +101,9 @@ const Navigation: React.FC = () => {
                   <Phone className="h-4 w-4" />
                   <span>0176 305 08 998</span>
                 </a>
-                <a href="mailto:elbaroma.catering@gmail.com" className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary">
+                <a href="mailto:info@elb-aroma.de" className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary">
                   <Mail className="h-4 w-4" />
-                  <span>elbaroma.catering@gmail.com</span>
+                  <span>info@elb-aroma.de</span>
                 </a>
                 <a href="#" className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary">
                   <Instagram className="h-4 w-4" />

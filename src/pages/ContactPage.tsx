@@ -94,8 +94,8 @@ const ContactPage: React.FC = () => {
                 {
                   icon: Mail,
                   label: "E-Mail",
-                  value: "elbaroma.catering@gmail.com",
-                  href: "mailto:elbaroma.catering@gmail.com",
+                  value: "info@elb-aroma.de",
+                  href: "mailto:info@elb-aroma.de",
                 },
                 {
                   icon: Instagram,

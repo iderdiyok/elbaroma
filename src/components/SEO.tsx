@@ -62,7 +62,7 @@ const SEO: React.FC<SEOProps> = ({
           "description": description,
           "url": url,
           "telephone": "+4917630508998",
-          "email": "elbaroma.catering@gmail.com",
+          "email": "info@elb-aroma.de",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Winsen (Luhe)",
