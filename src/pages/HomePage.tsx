@@ -5,6 +5,8 @@ import ServicesSection from '@/components/ServicesSection';
 import SeasonalSection from '@/components/SeasonalSection';
 // import GalleryPreview from '@/components/GalleryPreview';
 import InstagramSection from '@/components/InstagramSection';
+import AboutSection from '@/components/AboutSection';
+import GalleryPreview from '@/components/GalleryPreview';
 
 const HomePage: React.FC = () => {
   return (
@@ -15,8 +17,9 @@ const HomePage: React.FC = () => {
         keywords="Catering Winsen, orientalische Küche, türkische Küche, Hochzeit Catering, Firmenfeier Catering, Meze, Köfte, Event Catering"
       />
       <HeroSection />
+      <AboutSection />
       <ServicesSection />
-      <SeasonalSection />
+      {/* <SeasonalSection /> */}
       {/* <GalleryPreview /> */}
       <InstagramSection />
     </div>

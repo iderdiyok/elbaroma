@@ -5,6 +5,7 @@ import heroMeze from '@/assets/hero-meze.jpg';
 import turkishMeze from '@/assets/turkish-meze.jpg';
 import mediterraneanMeze from '@/assets/mediterranean-meze.jpg';
 import mezeSpread from '@/assets/meze-spread.jpg';
+import { Link } from 'react-router-dom';
 
 const GalleryPreview: React.FC = () => {
   const galleryImages = [
@@ -70,7 +71,7 @@ const GalleryPreview: React.FC = () => {
                   <h3 className="text-white font-bold text-lg mb-2">{image.title}</h3>
                   <p className="text-white/80 text-sm mb-4">{image.description}</p>
                   
-                  <div className="flex items-center space-x-3">
+                  {/* <div className="flex items-center space-x-3">
                     <Button size="sm" variant="secondary" className="bg-white/20 backdrop-blur-sm text-white border-white/30 hover:bg-white hover:text-primary">
                       <Eye className="h-4 w-4 mr-2" />
                       Ansehen
@@ -78,7 +79,7 @@ const GalleryPreview: React.FC = () => {
                     <Button size="sm" variant="ghost" className="text-white hover:bg-white/20">
                       <Heart className="h-4 w-4" />
                     </Button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -135,12 +136,12 @@ const GalleryPreview: React.FC = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="elbaroma-gradient text-white px-8">
-              Komplettes Menü ansehen
+              <Link to="/menu">Komplettes Menü ansehen</Link>
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="outline" size="lg" className="px-8">
+            {/* <Button variant="outline" size="lg" className="px-8">
               Galerie durchstöbern
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

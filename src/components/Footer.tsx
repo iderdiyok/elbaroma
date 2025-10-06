@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
                   to="/menu" 
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Menü & Bestellung
+                  Menü
                 </Link>
               </li>
               <li>
@@ -119,7 +119,7 @@ const Footer: React.FC = () => {
                   className="flex items-center space-x-3 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Instagram className="h-4 w-4" />
-                  <span>@elb.aroma</span>
+                  <a href="https://instagram.com/elb.aroma" target="_blank">@elb.aroma</a>
                 </a>
               </li>
               <li>
@@ -167,31 +167,9 @@ const Footer: React.FC = () => {
 
       {/* Bottom Bar */}
       <div className="bg-primary/10 border-t border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-sm text-muted-foreground">
-              © 2024 Elbaroma Catering. Alle Rechte vorbehalten.
-            </div>
-            
-            <div className="flex items-center space-x-6 text-sm">
-              <Link 
-                to="/impressum" 
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                Impressum
-              </Link>
-              <Link 
-                to="/datenschutz" 
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                Datenschutz
-              </Link>
-              <div className="text-muted-foreground">
-                Made with <Heart className="h-3 w-3 text-red-500 inline mx-1" /> in Winsen
-              </div>
-            </div>
+          <div className="py-8 text-center text-xs text-muted-foreground border-t border-gray-200">
+            © {new Date().getFullYear()} elbaroma. Mit ❤️ aus Winsen & Hamburg.
           </div>
-        </div>
       </div>
     </footer>
   );
