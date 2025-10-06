@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import meImg from '@/assets/me.jpg';
+import { motion } from "framer-motion";
 
 const AboutSection: React.FC = () => {
   return (
@@ -23,7 +24,11 @@ const AboutSection: React.FC = () => {
               
               {/* Bildbereich */}
               <div className="flex-shrink-0 w-full md:w-1/3">
-                <img
+                <motion.img
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
                   src={meImg}
                   alt="Inhaberin von elbaroma"
                   className="w-full rounded-2xl shadow-lg object-cover aspect-square md:aspect-auto"
@@ -31,7 +36,13 @@ const AboutSection: React.FC = () => {
               </div>
 
               {/* Textbereich */}
-              <div className="flex-1 text-muted-foreground leading-relaxed text-lg space-y-6">
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="flex-1 text-muted-foreground leading-relaxed text-lg space-y-6"
+              >
                 <p>
                   Hinter <strong>elbaroma</strong> steht keine anonyme Firma, sondern ich – 
                   eine Architektin aus Winsen, die ihre zweite große Leidenschaft zum Beruf gemacht hat: das Kochen.
@@ -68,7 +79,7 @@ const AboutSection: React.FC = () => {
                 <p className="text-center font-semibold text-foreground text-lg pt-4">
                   elbaroma – aus Hamburg. Von Herzen. Mit Wurzeln. Mit Seele. Mit Geschmack.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </CardContent>
         </Card>

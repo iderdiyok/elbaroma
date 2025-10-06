@@ -5,6 +5,7 @@ import MenuImageModal from './MenuImageModal';
 import sehriyeliPilav from '@/assets/menu-images/sehriyeli-pilav.jpg';
 import kofte from '@/assets/menu-images/kofte.jpg';
 import imamBayildi from '@/assets/menu-images/imam-bayildi.jpg';
+import { motion } from "framer-motion";
 
 const MenuDisplay: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<{ title: string; image: string; desc?: string } | null>(null);
@@ -101,17 +102,56 @@ const MenuDisplay: React.FC = () => {
           ]
         }
       ]
-    }
+    },
+    {
+    title: '🍮 Desserts & Süßspeisen (Tatlılar)',
+    groups: [
+      {
+        title: '🍰 Klassiker & Hausgemachte Desserts',
+        items: [
+          'Baklava – Traditionelles Blätterteiggebäck mit Pistazien und Honig 🧁',
+          'Sütlaç – Türkischer Milchreis mit Zimt und Vanille 🌱🧀',
+          'Revani – Grießkuchen mit Zitronensirup 🌱',
+          'Künefe – Knusprige Engelshaar-Teigschichten mit geschmolzenem Käse & Sirup 🧀 ✅',
+          'Ayva Tatlısı – Kandierte Quitten mit Schlagsahne 🌱🧁',
+          'Kazandibi – Karamellisierter Pudding mit zartem Vanillearoma 🧁',
+          'İrmik Helvası – Grießdessert mit Pinienkernen 🌱',
+        ]
+      },
+      {
+        title: '🍓 Fruchtige & Leichte Optionen',
+        items: [
+          'Mevsim Meyveleri – Saisonales Obst 🌱✅',
+          'Yoğurtlu Meyve – Joghurt mit Honig und frischen Früchten 🧁✅',
+          'Nar Tatlısı – Granatapfel-Dessert mit Minze 🌱✅'
+        ]
+      }
+    ]
+  }
   ];
 
   return (
     <section className="py-16 bg-muted/20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {sections.map((section, i) => (
-          <div key={i} className="my-16">
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: i * 0.2 }}
+            viewport={{ once: true }}
+            className="my-16"
+          >
             <h2 className="text-2xl font-semibold mb-6">{section.title}</h2>
 
             {section.groups.map((group, j) => (
+              <motion.div
+                key={j}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: j * 0.1 }}
+                viewport={{ once: true }}
+              >
               <Card key={j} className="mb-6 bg-white/70 backdrop-blur-sm shadow-md border-0">
                 <CardContent className="p-6">
                   <h3 className="text-lg font-bold mb-4">{group.title}</h3>
@@ -147,8 +187,9 @@ const MenuDisplay: React.FC = () => {
                   </ul>
                 </CardContent>
               </Card>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         ))}
 
         <div className="mt-12 text-center text-sm text-muted-foreground">
