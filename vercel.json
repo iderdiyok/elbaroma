@@ -1,8 +1,8 @@
 {
-  "redirects": [
-    { "source": "/:path*", "destination": "https://www.elb-aroma.de/:path*", "permanent": true }
-  ],
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ]
+  // "redirects": [
+  //   { "source": "/:path*", "destination": "https://www.elb-aroma.de/:path*", "permanent": true }
+  // ],
+  // "rewrites": [
+  //   { "source": "/(.*)", "destination": "/" }
+  // ]
 }
