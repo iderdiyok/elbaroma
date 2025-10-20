@@ -42,8 +42,6 @@ const MenuDisplay: React.FC = () => {
           title: '🥟 Pasta & Teiggerichte',
           items: [
             'Vegane Mantı – Türkische Tortellini mit Kartoffelfüllung 🌱',
-            'Penne mit Basilikum Pesto 🌱',
-            'Burrata Pasta – Pasta in Tomatensoße mit cremigem Burrata-Käse 🧀',
             'Pasta in Bechamelsauce 🧀'
           ]
         },
@@ -112,9 +110,6 @@ const MenuDisplay: React.FC = () => {
           'Baklava – Traditionelles Blätterteiggebäck mit Pistazien und Honig 🧁',
           'Sütlaç – Türkischer Milchreis mit Zimt und Vanille 🌱🧀',
           'Revani – Grießkuchen mit Zitronensirup 🌱',
-          'Künefe – Knusprige Engelshaar-Teigschichten mit geschmolzenem Käse & Sirup 🧀 ✅',
-          'Ayva Tatlısı – Kandierte Quitten mit Schlagsahne 🌱🧁',
-          'Kazandibi – Karamellisierter Pudding mit zartem Vanillearoma 🧁',
           'İrmik Helvası – Grießdessert mit Pinienkernen 🌱',
         ]
       },
@@ -122,8 +117,7 @@ const MenuDisplay: React.FC = () => {
         title: '🍓 Fruchtige & Leichte Optionen',
         items: [
           'Mevsim Meyveleri – Saisonales Obst 🌱✅',
-          'Yoğurtlu Meyve – Joghurt mit Honig und frischen Früchten 🧁✅',
-          'Nar Tatlısı – Granatapfel-Dessert mit Minze 🌱✅'
+          'Yoğurtlu Meyve – Joghurt mit Honig und frischen Früchten 🧁✅'
         ]
       }
     ]
