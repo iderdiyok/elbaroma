@@ -1,29 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { 
-  Phone, 
-  Mail, 
-  Instagram, 
-  MapPin, 
-  Clock, 
-  Heart,
-  ArrowRight
-} from 'lucide-react';
+import { Phone, Mail, Instagram, MapPin, Clock, Heart, ArrowRight } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gradient-to-b from-primary/5 to-primary/10 border-t">
+    <footer className="bg-gradient-to-b from-primary/5 to-primary/10 border-t" aria-labelledby="footer-heading">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 id="footer-heading" className="sr-only">Footer</h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="text-3xl font-bold elbaroma-text-gradient">
-                Elbaroma
-              </div>
-              <div className="text-lg text-muted-foreground">Catering & more</div>
+              <div className="text-3xl font-bold elbaroma-text-gradient">Elbaroma</div>
+              <div className="text-lg text-muted-foreground">Catering &amp; more</div>
             </div>
             
             <p className="text-muted-foreground mb-6 leading-relaxed max-w-md">
@@ -32,102 +24,63 @@ const Footer: React.FC = () => {
             </p>
             
             <div className="flex items-center space-x-2 text-sm text-muted-foreground mb-4">
-              <Heart className="h-4 w-4 text-red-500" />
+              <Heart className="h-4 w-4 text-red-500" aria-hidden="true" />
               <span>Genuss, der verbindet</span>
             </div>
             
-            <Button className="elbaroma-gradient text-white">
+            <Button asChild className="elbaroma-gradient text-white">
               <Link to="/contact">
-                Jetzt Anfragen
+                Jetzt anfragen
+                <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
               </Link>
-              <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <nav aria-label="Footer Navigation">
             <h3 className="font-bold text-foreground mb-6">Navigation</h3>
             <ul className="space-y-3">
-              <li>
-                <Link 
-                  to="/" 
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Startseite
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/menu" 
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Menü
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/contact" 
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Kontakt
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/impressum" 
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Impressum
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/datenschutz" 
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Datenschutz
-                </Link>
-              </li>
+              <li><Link to="/" className="text-muted-foreground hover:text-primary transition-colors">Startseite</Link></li>
+              <li><Link to="/menu" className="text-muted-foreground hover:text-primary transition-colors">Menü</Link></li>
+              <li><Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">Kontakt</Link></li>
+              <li><Link to="/impressum" className="text-muted-foreground hover:text-primary transition-colors">Impressum</Link></li>
+              <li><Link to="/datenschutz" className="text-muted-foreground hover:text-primary transition-colors">Datenschutz</Link></li>
             </ul>
-          </div>
+          </nav>
 
           {/* Contact Info */}
           <div>
             <h3 className="font-bold text-foreground mb-6">Kontakt</h3>
             <ul className="space-y-4">
               <li>
-                <a 
-                  href="tel:+4917630508998" 
-                  className="flex items-center space-x-3 text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <Phone className="h-4 w-4" />
+                <a href="tel:+4917630508998" className="flex items-center space-x-3 text-muted-foreground hover:text-primary transition-colors">
+                  <Phone className="h-4 w-4" aria-hidden="true" />
                   <span>0176 305 08 998</span>
                 </a>
               </li>
               <li>
-                <a 
-                  href="mailto:info@elb-aroma.de" 
-                  className="flex items-center space-x-3 text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <Mail className="h-4 w-4" />
+                <a href="mailto:info@elb-aroma.de" className="flex items-center space-x-3 text-muted-foreground hover:text-primary transition-colors">
+                  <Mail className="h-4 w-4" aria-hidden="true" />
                   <span>info@elb-aroma.de</span>
                 </a>
               </li>
               <li>
-                <a 
-                  href="#" 
+                <a
+                  href="https://instagram.com/elb.aroma"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center space-x-3 text-muted-foreground hover:text-primary transition-colors"
                 >
-                  <Instagram className="h-4 w-4" />
-                  <a href="https://instagram.com/elb.aroma" target="_blank">@elb.aroma</a>
+                  <Instagram className="h-4 w-4" aria-hidden="true" />
+                  <span>@elb.aroma</span>
                 </a>
               </li>
               <li>
                 <div className="flex items-start space-x-3 text-muted-foreground">
-                  <MapPin className="h-4 w-4 mt-1" />
+                  <MapPin className="h-4 w-4 mt-1" aria-hidden="true" />
                   <div>
                     <div>Winsen (Luhe)</div>
-                    <div className="text-sm">10km Lieferradius</div>
+                    <div className="text-sm">20 km Lieferradius</div>
                   </div>
                 </div>
               </li>
@@ -139,27 +92,19 @@ const Footer: React.FC = () => {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
-              <Clock className="h-8 w-8 elbaroma-text-gradient mx-auto mb-3" />
+              <Clock className="h-8 w-8 elbaroma-text-gradient mx-auto mb-3" aria-hidden="true" />
               <h4 className="font-semibold text-foreground mb-2">Flexible Zeiten</h4>
-              <p className="text-sm text-muted-foreground">
-                Wir richten uns nach Ihren Wünschen und Terminen
-              </p>
+              <p className="text-sm text-muted-foreground">Wir richten uns nach Ihren Wünschen und Terminen</p>
             </div>
-            
             <div>
-              <MapPin className="h-8 w-8 elbaroma-text-gradient mx-auto mb-3" />
+              <MapPin className="h-8 w-8 elbaroma-text-gradient mx-auto mb-3" aria-hidden="true" />
               <h4 className="font-semibold text-foreground mb-2">Kostenlose Lieferung</h4>
-              <p className="text-sm text-muted-foreground">
-                Innerhalb 10km um Winsen - Auf- und Abbau inklusive
-              </p>
+              <p className="text-sm text-muted-foreground">Innerhalb 20 km um Winsen – Auf- und Abbau inklusive</p>
             </div>
-            
             <div>
-              <Heart className="h-8 w-8 elbaroma-text-gradient mx-auto mb-3" />
+              <Heart className="h-8 w-8 elbaroma-text-gradient mx-auto mb-3" aria-hidden="true" />
               <h4 className="font-semibold text-foreground mb-2">Persönlicher Service</h4>
-              <p className="text-sm text-muted-foreground">
-                Individuelle Beratung für Ihr perfektes Event
-              </p>
+              <p className="text-sm text-muted-foreground">Individuelle Beratung für Ihr perfektes Event</p>
             </div>
           </div>
         </div>
@@ -167,9 +112,9 @@ const Footer: React.FC = () => {
 
       {/* Bottom Bar */}
       <div className="bg-primary/10 border-t border-border">
-          <div className="py-8 text-center text-xs text-muted-foreground border-t border-gray-200">
-            © {new Date().getFullYear()} elbaroma. Mit ❤️ aus Winsen & Hamburg.
-          </div>
+        <div className="py-8 text-center text-xs text-muted-foreground">
+          © {new Date().getFullYear()} elbaroma. Mit ❤️ aus Winsen &amp; Hamburg.
+        </div>
       </div>
     </footer>
   );

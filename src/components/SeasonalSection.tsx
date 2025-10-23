@@ -80,7 +80,7 @@ const SeasonalSection: React.FC = () => {
                   <div>
                     <h4 className="font-semibold text-foreground">Kompletter Service inklusive</h4>
                     <p className="text-sm text-muted-foreground">
-                      Auf- und Abbau sowie Lieferung innerhalb eines 10 km-Radius um Winsen.
+                      Auf- und Abbau sowie Lieferung innerhalb eines 20 km-Radius um Winsen.
                     </p>
                   </div>
                 </div>
